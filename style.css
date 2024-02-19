@@ -73,3 +73,29 @@ body {
 #seat{
   background-color: transparent;
 }
+/* .sell-data{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+.seat-data ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seat-data ul li p{
+  font-size: 18px;
+  font-weight: 600;
+}
+#seat-info-number{
+  font-size: 10px;
+  background-color:#1dd100;
+  padding: 2px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
