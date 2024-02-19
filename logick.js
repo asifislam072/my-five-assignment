@@ -12,6 +12,7 @@ let setcontNagative = 40;
 // const hindensetNumber = document.getElementById('seat-info-number').style.display="none";
 for (let btn of allBtnClick) {
   btn.addEventListener("click", function (e) {
+    e.target.disabled = true;
     if (setcontNagative > "36") {
       
       setcontNagative = setcontNagative - 1;
@@ -29,7 +30,7 @@ for (let btn of allBtnClick) {
       
       
       const p2 = document.createElement('p');
-      p2.innerText = 'Clasick'
+      p2.innerText = 'Economy'
       
       // ticket price
       const priceTiketct = {
@@ -62,3 +63,23 @@ for (let btn of allBtnClick) {
   });
 }
 
+// document.addEventListener('click',function(){
+//   if('new15'==='new15'){
+
+//   }
+// })
+
+function apply(){
+  const discountOffer = document.getElementById('discount-offer');
+  document.getElementById('total-sell-ticket').innerText =discountOffer;
+  if('new15'==='new15'){
+    const p =document.createElement('p');
+    p.innerText = "You get cupon offer"
+    const cuponOffer=document.getElementById('cupon-offer');
+    cuponOffer.appendChild(p)
+    p.style.backgroundColor='none'
+  }
+  else{
+    console.log('not get offer')
+  }
+}

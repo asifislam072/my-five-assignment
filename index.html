@@ -40,8 +40,8 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <a id="" class="btn"
-              >Button <img src="./images/bus-icon.png" alt=""
+            <a id="" class="btn text-[#1dd100] bg-[#c7fcc0]"
+              >Bus <img src="./images/bus-icon.png" alt=""
             /></a>
           </div>
         </div>
@@ -55,7 +55,7 @@
         <div class="header-box">
           <div class="text-area">
             <h1 class="font-extrabold text-red-800">
-              End-To-End Travel With <br /><span class="text-green-700"
+              End-To-End Travel With <br /><span class="text-[#1dd100]"
                 >P-Pirabon</span
               >
             </h1>
@@ -67,7 +67,7 @@
             </p>
             <button
               onclick="bayTicket()"
-              class="btn bg-lime-400 rounded-xl py-3 px-7 mt-4"
+              class="btn bg-[#1dd100] rounded-xl py-3 px-7 mt-4"
             >
               Bay Ticket
             </button>
@@ -372,6 +372,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="w-[50%]">
                 <!-- ticket sell mony -->
                 <div>
@@ -399,16 +400,15 @@
                       <h1>BDT <span id="total-sell-ticket">0</span></h1>
                     </div>
                     <div class="bg-slate-500">
-                      <label
-                        class="input input-bordered flex items-center gap-2"
-                      >
-                        <input
+                      <p id="cupon-offer"></p>
+                      <label class="input flex items-center"
+                        ><input
                           type="text"
                           class="bg-white"
                           placeholder="Have any cupon"
                         />
-                        <!-- <span class="badge badge-info">Optional</span> -->
                         <button
+                          onclick="apply()"
                           class="bg-[#1dd100] py-2 px-6 rounded-lg text-cyan-50"
                         >
                           Apply
@@ -417,40 +417,42 @@
                     </div>
                     <div class="flex justify-between items-center">
                       <h1>Grand Total</h1>
-                      <h1>BDT <span>0</span></h1>
+                      <h1>BDT <span id="discount-offer">0</span></h1>
                     </div>
                   </div>
                   <!-- form -->
                   <div>
-                    <p class="font-semibold mt-3">Name*</p>
-                    <label class="input input-bordered flex items-center gap-2">
-                      <input
-                        type="text"
-                        class="grow"
-                        placeholder="Enter your name"
-                      />
-                    </label>
+                    
 
-                    <p class="font-semibold mt-3">Phone Number*</p>
-                    <label class="input input-bordered flex items-center gap-2">
-                      <input
-                        type="text"
-                        class="grow"
-                        placeholder="Enter Phone Number"
-                      />
-                    </label>
-
-                    <p class="font-semibold mt-3">Email ID*</p>
-                    <label class="input input-bordered flex items-center gap-2">
-                      <input
-                        type="text"
-                        class="grow"
-                        placeholder="Enter email id"
-                      />
-                    </label>
-                    <button class="py-3 rounded-lg btn text-white bg-[#1dd100] w-[100%] mt-4">
+                    <!-- popup -->
+                    <!-- <div class="container">
+                      <div class="popup" id="popup">
+                         <img src="./images/success.png" alt="">
+                         <h2>Thank You!</h2>
+                         <p>Your details has been successfully submitted.Thanks!</p>
+                         <button type="button" onclick="closPopup()">Ok</button>
+                      </div>
+                  </div> -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="btn py-3 rounded-lg text-white bg-[#1dd100] w-[100%] mt-4" onclick="my_modal_1.showModal() ">
                       Next
                     </button>
+                    <dialog id="my_modal_1" class="modal">
+                      <div class="modal-box">
+                        <div class="flex justify-center items-center"><img class="w-14" src="./images/success.png" alt=""></div>
+                        <h3 class="font-bold text-lg text-center">Thank You!</h3>
+                        <p class="py-4 text-center">
+                          Your details has been successfully submitted.Thanks!
+                        </p>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <div class="flex justify-center items-center"><button class="btn">Ok</button></div>
+                            
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                   </div>
                   <!-- form -->
                 </div>
@@ -461,6 +463,40 @@
         <!-- funtion calculation end -->
       </div>
     </main>
+    <!-- footer start -->
+    <footer class="p-10 bg-black text-white">
+      <div
+        class="flex items-center justify-between full-page-site-padding mx-14"
+      >
+        <aside>
+          <p class="font-bold text-white text-2xl">H.F Hanif</p>
+          <p>H-F online Ticket Searvice <br />Best Out Service</p>
+        </aside>
+        <nav>
+          <h6 class="mb-3">Download our app</h6>
+          <div
+            class="flex items-center justify-center gap-2 border-2 border-gray-300 px-4 py-1 rounded-lg"
+          >
+            <img src="./images/playstore.png" alt="" />
+            <div>
+              <p>Get IT ON</p>
+              <p>Google Play</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="flex items-center justify-between full-page-site-padding mx-14 mt-5 border-dotted border-t-2 border-gray-500"
+      >
+        <div class="mt-6"><p>@hanif Service online sell websited</p></div>
+        <div class="mt-6">
+          <a class="pr-4" href="#">Terms and conditon</a>
+          <a class="pr-4" href="#">Turn & refund policy</a>
+          <a class="pr-4" href="#">Privacy policy</a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer start -->
 
     <!-- script file -->
     <script src="funtion.js"></script>
