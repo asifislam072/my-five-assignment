@@ -9,7 +9,6 @@ const allBtnClick = document.getElementsByClassName("seat");
 
 let seatInfoNumber = 0;
 let setcontNagative = 40;
-let ticketPrice = 550;
 // const hindensetNumber = document.getElementById('seat-info-number').style.display="none";
 for (let btn of allBtnClick) {
   btn.addEventListener("click", function (e) {
@@ -46,10 +45,10 @@ for (let btn of allBtnClick) {
       showSeatNumber.appendChild(li)
 
       // total count
-      const totalTicketId = document.getElementById('total-sell-ticket');
-      // const totalSellTicket = parseInt(totalTicketId);
-      // console.log(typeof totalSellTicket);
-      ticketPrice = totalTicketId + p3.innerText
+      const totalCost = document.getElementById('total-sell-ticket').innerText
+      const totalCostNumber = parseInt(totalCost)
+      document.getElementById('total-sell-ticket').innerText = totalCostNumber + parseInt(p3.innerText)
+
 
       document.getElementById("setcountnagative").innerText = setcontNagative;
       document.getElementById('seat-info-number').innerText = seatInfoNumber;
@@ -57,15 +56,9 @@ for (let btn of allBtnClick) {
       
     }
     else{
-        alert('You Not select 4 tar besi')
+        alert('You Cannot Buy More Then Four Tickets')
     }
     
   });
 }
 
-// var button = document.querySelector('seat'); 
-// var originalText = button.textContent; 
-
-// button.addEventListener('click', function() {
-//     console.log(originalText); 
-// });
